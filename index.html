@@ -1,54 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Yoan Gimenez - Gameplay Programmer</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111827;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: .5rem;
-        }
-
-        p {
-            color: #cbd5e1;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        a:hover {
-            background: #1d4ed8;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div>
-        <h1>Salut 👋</h1>
-        <p>Bienvenue sur mon site GitHub Pages.</p>
-        <a href="https://github.com/konishiba">Mon GitHub</a>
+<header>
+
+    <h1>Yoan Gimenez</h1>
+
+    <p class="subtitle">
+        Gameplay Programmer • Unreal Engine • Unity
+    </p>
+
+    <nav>
+
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+<section id="hero">
+
+    <div class="hero-text">
+
+        <h2>Gameplay & 3C Programmer</h2>
+
+        <p>
+
+            Développement Gameplay, IA, Animation,
+            Character Controller, Camera, Combat,
+            Unreal Engine et Unity.
+
+        </p>
+
     </div>
 
+</section>
+
+<section id="about">
+
+    <h2>À propos</h2>
+
+    <p>
+
+        Étudiant en Gameplay Programming.
+        Je développe principalement sous Unreal Engine et Unity,
+        avec une spécialisation en Gameplay, Animation et systèmes 3C.
+
+    </p>
+
+</section>
+
+<section id="projects">
+
+    <h2>Mes Projets</h2>
+
+    <div class="project-grid">
+
+        <!-- Projet -->
+
+        <div class="card">
+
+            <img src="projects/despair/cover.jpg">
+
+            <div class="content">
+
+                <h3>Despair</h3>
+
+                <p>
+
+                    Jeu d'infiltration en Unreal Engine.
+                    Gameplay, IA, Animation.
+
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#">Voir le projet</a>
+
+                    <a href="projects/despair/build.zip">
+                        Télécharger
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Projet -->
+
+        <div class="card">
+
+            <img src="projects/seriousgame/cover.jpg">
+
+            <div class="content">
+
+                <h3>Serious Game VR</h3>
+
+                <p>
+
+                    Serious Game développé pour La Poste.
+
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#">Voir le projet</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>Mail : you@example.com</p>
+
+    <p>GitHub : github.com/konishiba</p>
+
+    <p>LinkedIn : linkedin.com/xxxx</p>
+
+</section>
+
+<footer>
+
+    © 2026 - Yoan Gimenez
+
+</footer>
+
 </body>
+
 </html>
