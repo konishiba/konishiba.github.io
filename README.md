@@ -1,1 +1,0 @@
-# konishiba.github.io
