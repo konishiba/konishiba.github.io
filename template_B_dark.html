@@ -26,7 +26,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.02em;}
 a{color:inherit;text-decoration:none;}
 
-.c{max-width:1080px;margin:0 auto;padding:0 28px;}
+.c{max-width:1500px;margin:0 auto;padding:0 28px;}
 
 /* Nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,14,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);}
@@ -64,9 +64,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,14,20,.85)
 /* Tag */
 .tag{display:inline-flex;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--a3);background:rgba(72,207,178,.08);border:1px solid rgba(72,207,178,.2);padding:4px 10px;border-radius:3px;}
 
-/* Project cards — horizontal split */
-.pcard{display:grid;grid-template-columns:1fr 340px;border:1px solid var(--rule);background:var(--bg1);border-radius:10px;overflow:hidden;margin-bottom:28px;}
-.pcardA{grid-template-columns:340px 1fr;}
+.pcard{display:grid;grid-template-columns:1fr 700px;border:1px solid var(--rule);background:var(--bg1);border-radius:10px;overflow:hidden;margin-bottom:28px;}
+.pcardA{grid-template-columns:700px 1fr;}
 .pb{padding:36px 32px;}
 .prole{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--a1);margin-bottom:10px;}
 .ptitle{font-size:clamp(22px,3vw,30px);margin-bottom:6px;}
@@ -152,34 +151,63 @@ footer{padding:28px 0;border-top:1px solid var(--rule);display:flex;justify-cont
   <!-- DESPAIR -->
   <div class="pcard r">
     <div class="pb">
-      <p class="prole">Jeu étudiant · Objectif 3D</p>
+      <p class="prole">Jeu étudiant · Objectif 3D . 1er Année</p>
       <h3 class="ptitle">Despair</h3>
       <p class="psub">Infiltration TPS — Constantinople maudie</p>
-      <p class="pdesc">Despair est un jeu d'infiltration à la troisième personne développé sous Unreal Engine lors de ma première année de formation.
-      Sur ce projet, j'étais principalement responsable de la programmation des 3C (Character, Camera, Controls),
-      de l'IA des ennemis (le Spectre et l'Œil Géant), ainsi que de l'intégration et de la programmation des systèmes d'animation du personnage joueur et des ennemis.
-      Ce projet a été réalisé dans un cadre pédagogique imposant plusieurs contraintes techniques.
-      Nous devions développer les différentes mécaniques uniquement avec les outils et concepts abordés en cours.
-      L'utilisation de fonctionnalités avancées ou de composants simplifiant le développement, tels que les Box Cast,
-      Sphere Cast ou certains composants prédéfinis d'Unreal Engine, était volontairement interdite. Cette approche nous a amenés à concevoir nos propres solutions,
-      à mieux comprendre le fonctionnement des systèmes sous-jacents et à développer une solide méthodologie de résolution de problèmes.</p>
+      <p class="pdesc"><p>
+        <strong>Despair</strong> est un jeu d'infiltration à la troisième personne développé sous 
+        <strong>Unreal Engine</strong> lors de ma première année de formation. Sur ce projet, j'étais 
+         responsable de la programmation des <strong>3C (Character, Camera, Controls)</strong>, 
+        de l'<strong>IA des ennemis</strong> (le Spectre et l'Œil Géant), ainsi que de l'<strong>intégration 
+        et de la programmation des systèmes d'animation</strong> du personnage joueur et des ennemis.
+      </p><br>
+
+      <p>
+        Ce projet a été réalisé dans un cadre pédagogique imposant plusieurs contraintes techniques. 
+        Nous devions développer les différentes mécaniques uniquement avec les outils et concepts abordés 
+        en cours. L'utilisation de fonctionnalités avancées ou de composants simplifiant le développement, 
+        tels que les <strong>Box Cast</strong>, <strong>Sphere Cast</strong> ou certains composants prédéfinis 
+        d'Unreal Engine, était volontairement interdite. Cette approche nous a amenés à concevoir nos 
+        propres solutions, à mieux comprendre le fonctionnement des systèmes sous-jacents et à développer 
+        une solide méthodologie de résolution de problèmes.
+      </p><br>
+
+      <p>
+        Nous avons également travaillé avec <strong>Perforce (P4V)</strong> tout au long de la production, 
+        en nous familiarisant avec les bonnes pratiques de <strong>gestion de versions</strong>, de 
+        synchronisation des fichiers et de <strong>travail collaboratif</strong> sur un projet Unreal Engine. 
+        Cette expérience nous a permis de nous rapprocher des conditions de production utilisées dans 
+        un environnement professionnel.
+      </p>
+    </p>
       <div class="ptags">
         <span class="tag">UE5</span><span class="tag">C++</span><span class="tag">TPS</span><span class="tag">Gameplay Programming</span><span class="tag">3C</span>
-        <span class="tag">Animation</span><span class="tag">Enemy AI</span><span class="tag">Stealth</span>
+        <span class="tag">Animation</span><span class="tag">Enemy AI</span><span class="tag">Stealth</span><span class="tag">Perfoce (P4V)</span>
       </div>
       <div class="pcta">
         <a href="https://store.steampowered.com/app/4456120/" class="btn btn-p">Voir sur Steam</a>
       </div>
     </div>
     <div class="pmedia">
+      <video src="videos/allMechanicsDespair.mov" muted playsinline controls style="width:100%; border-radius:4px;"></video>
       <div class="gallery">
-        <div class="gph">img 01</div><div class="gph">img 02</div>
-        <div class="gph">img 03</div><div class="gph">img 04</div>
+        <div class="gph" style="padding:0; overflow:hidden;">
+          <video src="videos/BlackHolePresentation.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <div class="gph" style="padding:0; overflow:hidden;">
+          <img src="image/DespairCrouchTorche.png" controls style="width:100%; height:100%; object-fit:cover;"><img>
+        </div>
+        <div class="gph" style="padding:0; overflow:hidden;">
+          <img src="image/DespairCrate.png" controls style="width:100%; height:100%; object-fit:cover;"><img>
+        </div>
+        <div class="gph" style="padding:0; overflow:hidden;">
+          <img src="image/DespairHide.png" controls style="width:100%; height:100%; object-fit:cover;"><img>
+        </div>
       </div>
-      <div class="vph">
+      <!-- <div class="vph">
         <span style="font-size:20px;color:var(--a2);">▶</span>
-        <span>Vidéo gameplay</span>
-      </div>
+        <span>Vidéo gameplay</span> -->
+      <!-- </div> -->
     </div>
   </div>
 
@@ -188,30 +216,85 @@ footer{padding:28px 0;border-top:1px solid var(--rule);display:flex;justify-cont
     <div class="pmedia">
       <div class="vph">
         <span style="font-size:20px;color:var(--a2);">▶</span>
-        <span>Démo effet d'ivresse</span>
+        <span>Vidéo de présentation</span>
+      </div>
+      <div class="gallery">
+        <div class="gph" style="padding:0; overflow:hidden;">
+          <video src="videos/LaPosteIKHandTest.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <div class="gph" style="padding:0; overflow:hidden;">img 02</div>
+        <div class="gph" style="padding:0; overflow:hidden;">img 03</div>
+        <div class="gph" style="padding:0; overflow:hidden;">img 04</div>
+      </div>
+    </div>
+    <div class="pb">
+      <p class="prole">Animation Developer · Serious Game . 2eme Année</p>
+      <h3 class="ptitle">Serious Game<br>La Poste</h3>
+      <p class="psub">IK et simulation d'ivresse</p>
+      <p class="pdesc"><p>
+        De <strong>janvier à mars 2026</strong>, j’ai contribué au développement d’un
+        <strong>serious game</strong> destiné à la formation et à la sensibilisation des employés,
+        conçu pour soutenir les procédures de sécurité et les bonnes pratiques internes.
+        Développé sous <strong>Unity et C#</strong>, le projet a été réalisé dans le respect
+        des contraintes de production.
+      </p><br>
+
+      <p>
+        Je me suis concentré sur la <strong>programmation des animations</strong> et l’intégration
+        du gameplay, notamment les systèmes <strong>IK pour les mains et les doigts</strong> du
+        personnage, les fonctionnalités de gameplay basées sur l’animation, ainsi qu’un système de
+        <strong>distorsion des mouvements</strong> simulant des états de locomotion altérée,
+        comme les effets de l’intoxication, afin d’améliorer les scénarios de formation et la prise
+        de conscience des utilisateurs.
+      </p><br>
+
+      <p>
+        J’ai travaillé au sein d’un <strong>pipeline de production en équipe</strong>, en contribuant
+        au débogage, à l’intégration des fonctionnalités et à la mise au point du gameplay dans le
+        respect de délais stricts.
+      </p><br>
+
+      <p>
+        Forts de l’expérience acquise lors de nos précédents projets, nous avons également pu mettre
+        en pratique et transmettre nos <strong>bonnes pratiques de gestion de versions avec
+        Perforce (P4V)</strong>. En tant qu’étudiants en deuxième année de programmation, nous avons
+        notamment accompagné les étudiants de première année dans leur prise en main de
+        <strong>Perforce</strong>, en les formant aux bonnes pratiques de synchronisation, de gestion
+        des fichiers et de travail collaboratif sur un projet Unity.
+      </p>
+    </p>  
+      <div class="ptags">
+        <span class="tag">IK</span><span class="tag">Hand Latency</span><span class="tag">Tremblements</span><span class="tag">Serious Game</span><span class="tag">La Poste</span><span class="tag">Perforce(P4V)</span>
+      </div>
+      <div class="pcta">
+        <a href="https://www.linkedin.com/posts/santaezsaezcuritaeztravail-laposte-ugcPost-7447257936340455425-iHXG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGP3VwcBC5j46txAf7VX7F60ZpaOPMh-gRc" class="btn btn-p">Regarder sur Linkedin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- IkHand -->
+  <div class="pcard r">
+    <div class="pb">
+      <p class="prole">Projet personnel · Unity / C#</p>
+      <h3 class="ptitle">Inverse Kinematics hand</h3>
+      <p class="psub">Préproduction — Stratégie tour par tour</p>
+      <p class="pdesc">Phase de prototypage technique de mon jeu de stratégie personnel. Systèmes développés : mouvement sur spline avec budget d'endurance par segment via FMath::Lerp, visualisation de trajectoire USplineMeshComponent, AnimBP modulaire avec Linked Anim Graphs.</p>
+      <div class="ptags">
+        <span class="tag">C++</span><span class="tag">Spline Movement</span><span class="tag">NavMesh</span><span class="tag">AnimBP</span><span class="tag">Cover System</span>
+      </div>
+      <div class="pcta">
+        <a href="#" class="btn btn-p">GitHub</a>
+        <a href="#" class="btn btn-g">Build démo</a>
+      </div>
+    </div>
+    <div class="pmedia">
+      <div class="vph">
+        <span style="font-size:20px;color:var(--a2);">▶</span>
+        <span>Prototype spline movement</span>
       </div>
       <div class="gallery">
         <div class="gph">img 01</div><div class="gph">img 02</div>
         <div class="gph">img 03</div><div class="gph">img 04</div>
-      </div>
-    </div>
-    <div class="pb">
-      <p class="prole">Animation Developer · Serious Game</p>
-      <h3 class="ptitle">Serious Game<br>La Poste</h3>
-      <p class="psub">IK et simulation d'ivresse</p>
-      <p class="pdesc">J’ai contribué au développement d’un « serious game » destiné à la formation et à la sensibilisation des employés,
-      conçu pour soutenir les procédures de sécurité et les bonnes pratiques internes,
-      en utilisant Unity et C# dans le respect des contraintes de production.
-      Je me suis concentré sur la programmation des animations et l’intégration du gameplay,
-      notamment les systèmes IK pour les mains et les doigts du personnage, les fonctionnalités de gameplay basées sur l’animation,
-      ainsi qu’un système de distorsion des mouvements simulant des états de locomotion altérée (par exemple, les effets de l’intoxication) afin d’améliorer les scénarios de formation et la prise de conscience des utilisateurs.
-      J’ai travaillé au sein d’un pipeline de production en équipe, en contribuant au débogage,
-      à l’intégration des fonctionnalités et à la mise au point du gameplay dans le respect de délais stricts.</p>  
-      <div class="ptags">
-        <span class="tag">IK</span><span class="tag">Hand Latency</span><span class="tag">Tremblements</span><span class="tag">Serious Game</span>
-      </div>
-      <div class="pcta">
-        <a href="https://www.linkedin.com/posts/santaezsaezcuritaeztravail-laposte-ugcPost-7447257936340455425-iHXG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGP3VwcBC5j46txAf7VX7F60ZpaOPMh-gRc" class="btn btn-p">Regarder sur Linkedin</a>
       </div>
     </div>
   </div>
