@@ -6,7 +6,7 @@
   const cards = $('#projects .pcard');
   const items = [];
   const put = (els, ...en) => els.forEach((el, i) => en[i] !== undefined && items.push([el, en[i]]));
-
+   
   const card = (i, role, title, sub, descs, heads, cta) => {
     const c = cards[i];
     if (!c) return;
