@@ -125,7 +125,6 @@ footer{padding:28px 0;border-top:1px solid var(--rule);display:flex;justify-cont
 }
 </style>
 </head>
-<script src="i18n.js"></script>
 <body>
 
 <nav><div class="c ni">
@@ -618,5 +617,6 @@ nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');io.unobserve(x.target);}}),{threshold:.1});
 document.querySelectorAll('.r').forEach(el=>io.observe(el));
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>

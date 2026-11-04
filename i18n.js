@@ -97,28 +97,38 @@ The goal was above all to understand an audio system <strong>at the signal level
   items.forEach(([el]) => (el.dataset.fr = el.innerHTML));
 
   const style = document.createElement('style');
-  style.textContent = `.lang{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--strong);background:none;border:1px solid var(--rule);border-radius:4px;padding:4px 10px;margin-left:24px;cursor:pointer;transition:border-color .15s,color .15s}
+  style.textContent = `.langs{display:flex;gap:6px;margin-left:24px}
+.lang{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:4px;padding:4px 10px;cursor:pointer;transition:border-color .15s,color .15s,background .15s}
 .lang:hover,.lang:focus-visible{border-color:var(--a1);color:var(--ink)}
-@media(max-width:820px){.lang{order:2;margin-left:auto;margin-right:12px}.nt{order:3}}`;
+.lang[aria-pressed="true"]{color:#fff;background:var(--a1);border-color:var(--a1)}
+@media(max-width:820px){.langs{order:2;margin-left:auto;margin-right:12px}.nt{order:3}}`;
   document.head.append(style);
 
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'lang';
-  document.querySelector('.ni').append(btn);
-
+  const btns = {};
   const set = l => {
     items.forEach(([el, en]) => { el.innerHTML = l === 'en' ? en : el.dataset.fr; });
     document.documentElement.lang = l;
-    btn.textContent = l === 'en' ? 'FR' : 'EN';
-    btn.setAttribute('aria-label', l === 'en' ? 'Passer en français' : 'Switch to English');
+    Object.entries(btns).forEach(([code, b]) => b.setAttribute('aria-pressed', String(code === l)));
   };
 
-  btn.addEventListener('click', () => {
-    const next = document.documentElement.lang === 'en' ? 'fr' : 'en';
-    set(next);
-    try { localStorage.setItem('lang', next); } catch (e) {}
+  const wrap = document.createElement('div');
+  wrap.className = 'langs';
+  wrap.setAttribute('role', 'group');
+  wrap.setAttribute('aria-label', 'Langue / Language');
+  ['fr', 'en'].forEach(code => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'lang';
+    b.textContent = code.toUpperCase();
+    b.lang = code;
+    b.addEventListener('click', () => {
+      set(code);
+      try { localStorage.setItem('lang', code); } catch (e) {}
+    });
+    btns[code] = b;
+    wrap.append(b);
   });
+  document.querySelector('.ni').append(wrap);
 
   let l = null;
   try { l = localStorage.getItem('lang'); } catch (e) {}
